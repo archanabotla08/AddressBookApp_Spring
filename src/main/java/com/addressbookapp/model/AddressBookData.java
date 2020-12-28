@@ -3,7 +3,12 @@ package com.addressbookapp.model;
 
 import com.addressbookapp.dto.AddressBookDTO;
 
-public class AddressBookData {
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+
+public @Data class AddressBookData {
 	private int addressBookId;
 	private String name;
 	private String address;
@@ -19,11 +24,11 @@ public class AddressBookData {
 		super();
 	}
 
-	public int getaddressBookId() {
+	public int getAddressBookId() {
 		return addressBookId;
 	}
 
-	public void setaddressBookId(int addressBookId) {
+	public void setAddressBookId(int addressBookId) {
 		this.addressBookId = addressBookId;
 	}
 
@@ -42,4 +47,6 @@ public class AddressBookData {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	
 }
