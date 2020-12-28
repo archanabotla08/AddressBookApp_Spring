@@ -1,4 +1,5 @@
-package com.addressbookapp;
+package com.addressbookapp.model;
+
 
 import com.addressbookapp.dto.AddressBookDTO;
 
