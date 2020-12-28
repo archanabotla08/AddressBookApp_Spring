@@ -1,8 +1,8 @@
 package com.addressbookapp.dto;
 
 public class AddressBookDTO {
-	String name;
-	String address;
+	public String name;
+	public String address;
 	public AddressBookDTO(String name, String address) {
 		super();
 		this.name = name;
