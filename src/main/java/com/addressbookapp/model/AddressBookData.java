@@ -4,11 +4,9 @@ package com.addressbookapp.model;
 import com.addressbookapp.dto.AddressBookDTO;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 
-public @Data class AddressBookData {
+public  @Data  class  AddressBookData {
 	private int addressBookId;
 	private String name;
 	private String address;
@@ -47,6 +45,5 @@ public @Data class AddressBookData {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 	
 }
