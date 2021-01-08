@@ -19,10 +19,13 @@ public class AddressBookDTO {
 	@NotEmpty(message = "Phone Number Should Not be nUll")
 	public String phoneNumber;
 
+	@NotEmpty(message = "City Should Not be Null")
 	public String city;
 
+	@NotEmpty(message = "State Should Not be Null")
 	public String state;
 
+	@NotEmpty(message = "ZipCode Should Not be Null")
 	public String zipCode;
 	
 }
