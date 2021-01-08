@@ -12,12 +12,24 @@ public @Data class AddressBookData {
 	private int addressBookId;
 	private String name;
 	private String address;
+	public String phoneNumber;
+	public String city;
+	public String state;
+	public String zipCode;
 
 	public AddressBookData(int addressBookId, AddressBookDTO addressBookDTO) {
 		super();
 		this.addressBookId = addressBookId;
+		this.updateAddressBookData(addressBookDTO);
+	}
+	
+	public void updateAddressBookData(AddressBookDTO addressBookDTO) {
 		this.name = addressBookDTO.name;
 		this.address = addressBookDTO.address;
+		this.city = addressBookDTO.city;
+		this.state = addressBookDTO.state;
+		this.zipCode = addressBookDTO.zipCode;
+		this.phoneNumber = addressBookDTO.phoneNumber;
 	}
 
 	public AddressBookData() {
