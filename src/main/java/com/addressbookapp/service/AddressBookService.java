@@ -41,19 +41,14 @@ public class AddressBookService implements IAddressBookService {
 	@Override
 	public AddressBookData updateAddressBookData(int personId,AddressBookDTO addressBookDTO) {
 		AddressBookData addressBookData= this.getAddressBookDataById(personId);
-//		System.out.println("AddressBookData: " + addressBookData.getAddressBookId());
-		addressBookData.setName(addressBookDTO.name);
-		addressBookData.setAddress(addressBookDTO.address);
-		addressBookData.setCity(addressBookDTO.city);
-		addressBookData.setState(addressBookDTO.state);
-		addressBookData.setZipCode(addressBookDTO.zipCode);
-		addressBookData.setPhoneNumber(addressBookDTO.phoneNumber);
-		addressBookList.set(personId - 1, addressBookData);
-		return addressBookData;
+		addressBookData.updateAddressBookData(addressBookDTO);
+		return addressBookRepository.save(addressBookData);
+
 	}
 
 	@Override
 	public void deleteAddressBookData(int personId) {
-		addressBookList.remove(personId - 1);
+		AddressBookData addressBookData = this.getAddressBookDataById(personId);
+		addressBookRepository.delete(addressBookData);
 	}
 }
