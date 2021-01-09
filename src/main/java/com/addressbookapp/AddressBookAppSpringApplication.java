@@ -3,9 +3,11 @@ package com.addressbookapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
+@EnableJpaRepositories("com.addressbookapp.repository")
 @ComponentScan("com.addressbookapp")
 public class AddressBookAppSpringApplication {
 	private static final org.slf4j.Logger log = 
